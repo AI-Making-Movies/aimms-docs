@@ -1,5 +1,7 @@
 # AIMMS Documentation
 
+***NOTE: This site is under construction check back in January 2026 for release ready version***
+
 Welcome to the documentation for AIMMS *(Artificial Intelligent Movie Management System)*
 
 ![AIMMS version 1.0 (StorM)](images/general/about-image.png)

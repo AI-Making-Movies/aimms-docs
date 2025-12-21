@@ -1,12 +1,118 @@
 site_name: AIMMS Documentation
+site_description: Comprehensive documentation for AIMMS (Artificial Intelligent Movie Making Systems)
+site_author: AIMMS Team
+site_url: https://aimms.github.io
+
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.integrate
+  icon:
+    logo: material/movie
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: en
+  - awesome-pages
 
 nav:
-  - Introduction: index.md
+  - Home: index.md
   - Getting Started:
-      - Installation: install.md
-      - Configuration: config.md
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - First Steps: getting-started/first-steps.md
+      - Troubleshooting: getting-started/troubleshooting.md
+  - User Guide:
+      - Project Management:
+          - Creating Projects: user-guide/project-management/creating-projects.md
+          - Opening Projects: user-guide/project-management/opening-projects.md
+          - Project Structure: user-guide/project-management/project-structure.md
+          - Project Settings: user-guide/project-management/project-settings.md
+      - Shots Management:
+          - Overview: user-guide/shots-management/overview.md
+          - Adding Shots: user-guide/shots-management/adding-shots.md
+          - Editing Shots: user-guide/shots-management/editing-shots.md
+          - Deleting Shots: user-guide/shots-management/deleting-shots.md
+          - Importing Shots: user-guide/shots-management/importing-shots.md
+          - Searching Shots: user-guide/shots-management/searching-shots.md
+      - Image Storyboard:
+          - Overview: user-guide/image-storyboard/overview.md
+          - Viewing Images: user-guide/image-storyboard/viewing-images.md
+          - Managing Takes: user-guide/image-storyboard/managing-takes.md
+          - Replacing Images: user-guide/image-storyboard/replacing-images.md
+          - Starred Images: user-guide/image-storyboard/starred-images.md
+      - Video Storyboard:
+          - Overview: user-guide/video-storyboard/overview.md
+          - Viewing Videos: user-guide/video-storyboard/viewing-videos.md
+          - Managing Video Takes: user-guide/video-storyboard/managing-video-takes.md
+          - Replacing Videos: user-guide/video-storyboard/replacing-videos.md
+          - Video Metadata: user-guide/video-storyboard/video-metadata.md
+      - Assets Management:
+          - Overview: user-guide/assets-management/overview.md
+          - Adding Assets: user-guide/assets-management/adding-assets.md
+          - Managing Assets: user-guide/assets-management/managing-assets.md
+          - Asset Replacement: user-guide/assets-management/asset-replacement.md
+      - Unused Takes:
+          - Overview: user-guide/unused-takes/overview.md
+      - Logs:
+          - Overview: user-guide/logs/overview.md
+      - Routing Matrix:
+          - Overview: user-guide/routing-matrix/overview.md
   - Features:
-      - Feature A: feature-a.md
-      - Feature B: feature-b.md
+      - Navigation:
+          - Keyboard Shortcuts: features/navigation/keyboard-shortcuts.md
+      - Themes:
+          - Theme Selection: features/themes/theme-selection.md
+      - File Operations:
+          - Export CSV: features/file-operations/export-csv.md
+      - Validation:
+          - Project Validation: features/validation/project-validation.md
+  - Advanced Usage:
+      - Workflow Integration: advanced-usage/workflow-integration.md
+  - Reference:
+      - Coming Soon: reference/index.md
+  - FAQ:
+      - Coming Soon: faq/index.md
+  - Support:
+      - Coming Soon: support/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aimms/aimms
+    - icon: fontawesome/solid/envelope
+      link: mailto:support@aimms.com
+  version:
+    provider: mike
+    default: latest
