@@ -2,10 +2,11 @@
 
 ## Download and Installation
 
-AIMMS is distributed as a standalone application that requires no installation:
+AIMMS is distributed as a standalone application:
 
 ### Step 1: Download
-1. Visit the official AIMMS website
+
+1. Visit the official AIMMS website *(coming soon)*
 2. Download the latest version for your platform
 3. Choose the appropriate file for your operating system:
    - **Windows**: `aimms_windows_x64.zip`
@@ -13,62 +14,63 @@ AIMMS is distributed as a standalone application that requires no installation:
    - **macOS**: `aimms_macos_x64.dmg`
 
 ### Step 2: Extract Files
+
 1. **Windows**: Extract the ZIP file to your desired location
 2. **Linux**: Extract the tar.gz file using `tar -xzf aimms_linux_x64.tar.gz`
 3. **macOS**: Open the DMG file and drag AIMMS to your Applications folder
 
 ### Step 3: Launch Application
-1. **Windows**: Double-click `aimms.exe`
+
+1. **Windows**: Double-click `main-aimms_qt.exe`
 2. **Linux**: Run `./aimms` from the extracted directory
 3. **macOS**: Launch from Applications folder or extracted location
 
 ### Step 4: License Activation
+
 1. On first launch, you'll be prompted for a license key
-2. Enter your license key when prompted
-3. Or choose to use the trial version if available
-4. The application will validate and activate
+2. Enter your email and license key when prompted *(recieved on purchase)*
+3. The application will validate and activate
+
+*NOTE: Your license key for AIMMS version 1.0 is associated to your email address, keep it safe. After validation it will be stored in a file on your system.*
 
 ## System Requirements
 
 ### Minimum Requirements
+
 - **Operating System**: Windows 10, Linux (Ubuntu 18.04+), macOS 10.14+
 - **Processor**: 2 GHz dual-core processor
 - **RAM**: 4GB
-- **Storage**: 1GB free space
+- **Storage**: 1GB free space for the application
 - **Graphics**: OpenGL 3.3+ compatible graphics card
 
 ### Recommended Requirements
+
 - **Operating System**: Latest version of Windows 10/11, Linux, or macOS
-- **Processor**: 2.5 GHz quad-core processor or better
-- **RAM**: 8GB or more
-- **Storage**: SSD with 5GB+ free space
-- **Graphics**: Dedicated graphics card with 2GB+ VRAM
+- **Processor**: 2.5 GHz quad-core processor or better recommended
+- **RAM**: 8GB or more recommended
+- **Storage**: SSD with 1GB free space for application
+- **Graphics**: most basic graphics cards capable of using ffmpeg and ffprobe *(NOTE: a GPU with VRAM is not required)*
+
+*NOTE: Projects will grow as large as you make them. A 600 shot, 21K take project was over 25GB file size. The size of the project will have some slight impact on the application as projects need to manage caching info on image and video files.*
 
 ## First-Time Setup
 
 ### Initial Configuration
-1. **Language Selection**: Choose your preferred interface language
-2. **Theme Selection**: Select light or dark theme
-3. **Default Settings**: Configure default project settings
-4. **File Associations**: Set up file type associations (optional)
 
-### Project Directory Setup
-1. **Default Location**: Choose where to save new projects
-2. **Backup Settings**: Configure automatic backup preferences
-3. **Media Settings**: Set default media processing options
+1. **Enter License Key**: On starting the application for the first time. Email address and valid license key.
+2. **Default Project Location**: Choose where to save your project.
 
-### Integration Setup
-1. **ComfyUI Integration**: Configure ComfyUI server settings (if applicable)
-2. **External Tools**: Set up paths to external applications
-3. **Cloud Storage**: Configure cloud backup options (future feature)
 
 ## Troubleshooting Installation
 
 ### Common Issues
 
 #### Application Won't Launch
+
 **Problem**: AIMMS fails to start
+
 **Solutions**:
+
 - Check that your system meets minimum requirements
 - Ensure you have extracted all files from the archive
 - Try running as administrator (Windows)
@@ -76,25 +78,35 @@ AIMMS is distributed as a standalone application that requires no installation:
 
 #### License Activation Problems
 **Problem**: License key not accepted
+
 **Solutions**:
+
 - Verify the license key is entered correctly
-- Check your internet connection for online validation
+- Check you recieved a license key on purchase *(associated to email address)*
 - Contact support if the issue persists
+- You do not need to be online to activate the license
 
 #### Missing Dependencies
 **Problem**: Error about missing libraries or dependencies
+
 **Solutions**:
+
 - Ensure you downloaded the correct version for your platform
 - Check that all files were extracted properly
-- Try reinstalling from the official website
+- Try re-downloading from the official website
+- On Linux and OSX you will need to install ffmpeg and ffprobe seperately *(On Windows, ffmpeg and ffprobe are bundled with the application)*
 
 #### Performance Issues
 **Problem**: Application runs slowly or lags
+
 **Solutions**:
-- Close other applications to free up system resources
-- Reduce image/video quality settings in preferences
+
+- Check your system resources
+- Confirm you have current version of ffmpeg and ffprobe
 - Ensure you have sufficient free disk space
 - Update your graphics drivers
+- Large projects *(e.g. 600 shots with 20K takes)* can cause a few seconds delay during opening of projects and page changes, as they reload and manage cached images and videos.
+- Run *"Analyze Zeroed-Out Takes"* from the *Unused* page and confirm they are safe to delete. Excessive numbers of empty take placeholders will slow down the cache on large projects.
 
 ### Platform-Specific Issues
 
@@ -123,35 +135,37 @@ AIMMS is distributed as a standalone application that requires no installation:
 5. Check that settings are saved properly
 
 ### Update Check
-1. AIMMS will automatically check for updates
-2. Enable automatic update notifications in settings
-3. Download and install updates as they become available
+1. AIMMS will require manual checks for updates
+2. Download updates as they become available *(standalone package)*
+3. Ensure you have a copy of your license key and email
+4. Rename the old version folder
+5. Download and extract the new version
+6. Test the new version before deleting the old version
 
 ## Getting Help
 
 ### Built-in Help
-- **Documentation**: Access via Help → Documentation
-- **Context Help**: Right-click any element for context-specific help
-- **Keyboard Shortcuts**: View via Help → Keyboard Shortcuts
+- **Documentation**: Access via Help → Documentation (This website)
 
 ### Online Resources
-- **Official Website**: Visit for latest downloads and news
-- **Documentation**: Comprehensive user guides and tutorials
-- **Community Forum**: User discussions and support
-- **Video Tutorials**: Step-by-step video guides
+- [**Official Website**](https://markdkberry.com/software/): Visit for latest downloads and news
+- [**Documentation**](https://mdkberry.github.io/aimms-docs/): Comprehensive user guides and tutorials
+- **Community Forum**: User discussions and support *(planned)*
+- [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
 
 ### Support Contact
-- **Email Support**: Contact support@aimms.com
-- **Bug Reports**: Report issues through the application
-- **Feature Requests**: Submit suggestions via the website
+- **Email Support**: *coming soon*
+- **Bug Reports**: *coming soon*
+- **Feature Requests**: *coming soon*
 
 ## Next Steps
 
 After successful installation:
+
 1. **Create Your First Project**: Follow the Quick Start Guide
 2. **Explore the Interface**: Familiarize yourself with the main modules
 3. **Import Existing Data**: Use CSV import if you have existing shot lists
-4. **Customize Settings**: Adjust preferences to your workflow
+4. **Customize Settings**: Adjust to your preferences
 5. **Learn the Workflow**: Understand the complete AIMMS workflow
 
 Your AIMMS installation is now ready for professional storyboard management!
