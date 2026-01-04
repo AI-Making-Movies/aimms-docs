@@ -6,7 +6,7 @@ This section contains comprehensive reference material for AIMMS, including tech
 
 ## Coming Soon
 
-This reference section is currently under development. Please check back soon for:
+*This reference section is currently under development. Please check back soon for:*
 
 - **Technical Specifications**: Detailed technical information about AIMMS architecture and components
 - **API Documentation**: Complete API reference for developers and integrators

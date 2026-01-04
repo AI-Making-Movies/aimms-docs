@@ -68,7 +68,7 @@ AIMMS uses a tabbed interface with 8 main modules:
         - **Video Prompt**: `A man walks into an office and sits at his desk`
         - Add other metadata as required. *(All entries are optional except `shot_name` which must be provided. Though the shot name does not need to be unique, it is highly recommended to make it so.)*
 
-[continue from here]
+>***[continue from here]***
 
 3. **Save the Shot**:
 
