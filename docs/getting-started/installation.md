@@ -49,16 +49,16 @@ AIMMS is distributed as a standalone application:
 - **Processor**: 2.5 GHz quad-core processor or better recommended
 - **RAM**: 8GB or more recommended
 - **Storage**: SSD with 1GB free space for application
-- **Graphics**: most basic graphics cards capable of using ffmpeg and ffprobe *(NOTE: a GPU with VRAM is not required)*
+- **Graphics**: graphics cards capable of using ffmpeg and ffprobe *(NOTE: a GPU with VRAM is not necessary)*
 
-*NOTE: Projects will grow as large as you make them. A 600 shot, 21K take project was over 25GB file size. The size of the project will have some slight impact on the application as projects need to manage caching info on image and video files.*
+*NOTE: Projects will grow as large as you make them and remain seperate to the functioning of the application itself. For example, a 600 shot, 21K take project was over 25GB in file size and stored on an external SSD. The size of the project had minimal impact on the application, though larger projects need to manage cache loading on previews for image and video files, this has been streamlined in the code.*
 
 ## First-Time Setup
 
 ### Initial Configuration
 
 1. **Enter License Key**: On starting the application for the first time. Email address and valid license key.
-2. **Default Project Location**: Choose where to save your project.
+2. **Default Project Location**: Choose where to save your project, or open and validate an existing AIMMS project *(subject to version control and migration)*.
 
 
 ## Troubleshooting Installation
@@ -103,10 +103,10 @@ AIMMS is distributed as a standalone application:
 
 - Check your system resources
 - Confirm you have current version of ffmpeg and ffprobe
-- Ensure you have sufficient free disk space
+- Ensure you have sufficient free disk space *(including swap files)*
 - Update your graphics drivers
-- Large projects *(e.g. 600 shots with 20K takes)* can cause a few seconds delay during opening of projects and page changes, as they reload and manage cached images and videos.
-- Run *"Analyze Zeroed-Out Takes"* from the *Unused* page and confirm they are safe to delete. Excessive numbers of empty take placeholders will slow down the cache on large projects.
+- Large projects *(e.g. 600 shots with 20K takes)* can cause a few seconds delay during opening of projects and page changes, as they reload and manage cached image and video previews.
+- Run *"Analyze Zeroed-Out Takes"* from the *Unused* page and confirm the placeholder media files are safe to delete. Excessive numbers of empty take placeholders may slow down the caching system on large projects.
 
 ### Platform-Specific Issues
 
@@ -145,11 +145,11 @@ AIMMS is distributed as a standalone application:
 ## Getting Help
 
 ### Built-in Help
-- **Documentation**: Access via Help → Documentation (This website)
+- **Documentation**: Access via Help → Documentation *(This website)*
 
 ### Online Resources
 - [**Official Website**](https://markdkberry.com/software/): Visit for latest downloads and news
-- [**Documentation**](https://mdkberry.github.io/aimms-docs/): Comprehensive user guides and tutorials
+- [**Documentation**](https://ai-making-movies.github.io/aimms-docs/): Comprehensive user guides and tutorials
 - **Community Forum**: User discussions and support *(planned)*
 - [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
 

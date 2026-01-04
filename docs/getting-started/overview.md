@@ -35,10 +35,10 @@ There are two seperate storyboards but they share the same shot name database en
 
 The storyboards should be treated as seperate entities used at different stages of a project's development.
 
-The Image storyboard is used to develop the planning stages of a film project, and the video storyboard is used when working toward the final cut.
+The Image storyboard is used to develop the planning stages of a film project, and the video storyboard is used when working toward the final cut for clip takes.
 
 ### Takes
-Each shot can have multiple "takes" - different versions of the same shot:
+Each shot can have multiple "takes", i.e. different versions of the same shot:
 
 - **Image Storyboard Takes**: Different base images for the same shot
 - **Video Storyboard Takes**: Different final videos for the same shot with matching workflow metadata png file
@@ -47,11 +47,11 @@ Each shot can have multiple "takes" - different versions of the same shot:
 ### Assets
 Assets are non-shot images that will be used in the production:
 
-- **Characters**: images of characters you plan to use in the project.
-- **Locations**: images of locations you plan to use in the project.
+- **Characters**: Images of characters you plan to use in the project.
+- **Locations**: Images of locations you plan to use in the project.
 - **Other**: Any other asset images.
 
-    - **3D Models**: 3d model file types (glb, fbx) feature in a lot of AI video production work and have been included in AIMMS version 1.0 along with a previewer in the Assets page (not in the storyboards).
+    - **3D Models**: 3d model file types (glb, fbx) feature in a lot of AI video production work and have been included in AIMMS version 1.0 along with a previewer in the Assets page.
 
 ## System Requirements
 
@@ -66,18 +66,18 @@ Assets are non-shot images that will be used in the production:
 
 AIMMS uses a modular, tabbed interface with 8 main modules:
 
-1. **Shots**: Manage your shot list and details
+1. **Shots**: Manage your shot list and details *(sqlite3 database)*
 2. **Image Storyboard**: View and manage base images for each shot
-3. **Video Storyboard**: View and manage final videos for each shot
+3. **Video Storyboard**: View and manage final video clips for each shot
 4. **Assets**: Manage asset images & 3D models *(locations, characters, other)*
-5. **Unused**: Clean up unused media files
+5. **Unused**: Clean up unused placeholder files and find media orphans
 6. **Settings**: Configure project settings
 7. **Logs**: View application and project logs
-8. **Routing**: Routine matrix health *(media files to database)*
+8. **Routing**: Routine matrix connectivity health *(between media files and database)*
 
 ## Project Organization
 
-AIMMS automatically organizes your project files in a structured folder system:
+AIMMS automatically organizes your project files in a structured folder system which is located on a drive of your choosing and external to the application:
 
 ```
 project_root/
