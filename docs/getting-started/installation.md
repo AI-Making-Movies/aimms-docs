@@ -6,7 +6,7 @@ AIMMS is distributed as a standalone application:
 
 ### Step 1: Download
 
-1. Visit the official AIMMS website *(coming soon)*
+1. Visit the [official AIMMS portal](https://markdkberry.com/software/)
 2. Download the latest version for your platform
 3. Choose the appropriate file for your operating system:
    - **Windows**: `aimms_windows_x64.zip`
@@ -153,10 +153,6 @@ AIMMS is distributed as a standalone application:
 - **Community Forum**: User discussions and support *(planned)*
 - [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
 
-### Support Contact
-- **Email Support**: *coming soon*
-- **Bug Reports**: *coming soon*
-- **Feature Requests**: *coming soon*
 
 ## Next Steps
 

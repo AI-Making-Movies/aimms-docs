@@ -98,7 +98,7 @@ project_root/
 └── project_config.json      # Project config info
 ```
 
-## Workflow Integration
+## Workflow (Process) Integration
 
 AIMMS is designed to manage administration of your AI generated content on a per project basis:
 
