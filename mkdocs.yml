@@ -1,7 +1,7 @@
 site_name: AIMMS Documentation
 site_description: Comprehensive documentation for AIMMS (Artificial Intelligent Movie Making Systems)
 site_author: AIMMS Team
-site_url: https://aimms.github.io
+site_url: https://ai-making-movies.github.io/aimms-docs
 
 theme:
   name: material
@@ -58,7 +58,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/aimms/aimms
+      link: https://github.com/AI-Making-Movies/aimms-docs
     - icon: fontawesome/solid/envelope
       link: mailto:support@aimms.com
   version:
