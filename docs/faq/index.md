@@ -2,7 +2,7 @@
 
 ## Overview
 
-This section contains answers to frequently asked questions about AIMMS. If you don't find your question here, please check our [Support](../support/index.md) section for additional help.
+This section contains answers to frequently asked questions about AIMMS.
 
 ## General Questions
 
@@ -16,7 +16,7 @@ AIMMS supports Windows 10, Linux, and macOS. It's distributed as a standalone ap
 
 ### Is AIMMS free to use?
 
-AIMMS requires a license for full functionality. Trial versions may be available for evaluation purposes.
+AIMMS requires a license for full functionality.
 
 ## Installation and Setup
 
@@ -30,7 +30,7 @@ AIMMS is distributed as a standalone application that requires no installation. 
 - **Processor**: 2 GHz dual-core processor
 - **RAM**: 4GB minimum, 8GB recommended
 - **Storage**: 1GB free space
-- **Graphics**: OpenGL 3.3+ compatible graphics card
+- **Graphics**: OpenGL 3.3+ compatible graphics card *(GPU not required. `ffmpeg` and `ffprobe` are bundled with Windows version, Linux and OSX require them installed seperately)*
 
 ### I'm having trouble installing AIMMS. What should I do?
 
@@ -49,145 +49,130 @@ For detailed instructions, see our [First Steps Guide](../getting-started/first-
 
 ### How do I add shots to my project?
 
-1. Navigate to the **Shots** module (Ctrl+1)
+1. Navigate to the **Shots** page (Ctrl+1)
 2. Click **Add New Shot**
-3. Fill in shot details (order, name, description, prompts)
+3. Fill in shot details (shot name, description, prompts, etc...)
 4. Click **Save**
 
-For comprehensive shot management, see our [Shots Management Guide](../user-guide/shots-management/).
 
 ### Can I import existing shot lists?
 
-Yes, AIMMS supports CSV import for shots. See our [Importing Shots Guide](../user-guide/shots-management/importing-shots.md) for details.
+Yes, AIMMS supports CSV import for shots.
 
-### How do I add images and videos to shots?
+1. Navigate to the **Shots** page (Ctrl+1)
+2. Click **Import CSV**
+3. Locate a valid csv containing required columns
+4. Click **Validate** and then **Import**
 
-1. Navigate to **Images** (Ctrl+2) or **Videos** (Ctrl+3) module
+### How do I add images and videos to existing shots?
+
+1. Navigate to **Images** (Ctrl+2) or **Videos** (Ctrl+3) page
 2. Select your shot
-3. Click **Add Take**
-4. Browse and select your media file
-5. Click **Add**
-
-For detailed instructions, see our [Image Storyboard](../user-guide/image-storyboard/) and [Video Storyboard](../user-guide/video-storyboard/) guides.
+3. Click on **View Media** to open the Takes popup modal
+4. Click **Add Take** to add more empty placeholders
+5. Click **Replace** to replace empty placeholders with valid media 
+5. Browse and select your media file
 
 ## Technical Questions
 
 ### What file formats are supported?
 
-**Images**: PNG, JPG, JPEG, WebP, BMP, TIFF
-**Videos**: MP4, WebM, MKV, GIF
-**Assets**: Various formats including PDF, DOC, MP3, WAV, and more
+**Images**: PNG
+
+**Videos**: MP4, MKV
+
+**Assets**: Image or 3D Model formats including PNG, GLB, FBX
 
 ### How does AIMMS organize project files?
 
 AIMMS automatically organizes files in a structured folder system:
 ```
 project_root/
-├── data/          # Database and data files
+├── data/          # Database and backup data files
 ├── media/         # Shot media files
-├── assets/        # Project assets
 ├── logs/          # Project and application logs
 └── project_config.json
 ```
 
 ### Can I work on multiple projects?
 
-Yes, you can create and switch between multiple projects. Use **File** → **Switch Project** to change projects.
+Yes, you can create and switch between multiple projects. Use **File** → **Open Project** to change projects. This will require a restart of the application.
 
 ### How do I backup my project?
 
-AIMMS automatically creates backups, but you can also:
-1. Use **File** → **Export CSV** for data backup
-2. Manually copy your project folder
-3. Use cloud storage for additional backup
+AIMMS provides several backup options under the File menu:
+
+1. **Archive Project**: Archive a complete project folder to a time-stamped `.zip` file *(For large projects this might be best done manually with the AIMMS application closed)*
+2. **Backup Database**: Run File → Backup Database at regular intervals to provide roll-back options. These will be automatically stored in the `project\data\backup` folder as time-stamped `.db` files and can be used to manually replace a corrupt `project\data\shots.db`. Manually remove old ones as you see fit.
+3. **CSV export**: Use File → Export CSV at regular intervals. This will make time-stamped csv entries under `project\data\csv` for each of the `shots.db` tables. Manually remove these as you see fit.
+4. **Routing relationships**: Use File → Save to create regular saves of the routing relationship between the `shots.db` and the `project\media` files. This will be useful in case of complete loss of `shots.db` to rebuild the database. The information is saved to the `project\save` folder as `.aimms` in JSON format. This can also be used to rename `project\media\{shot_id}` folders to `{shot_name}` for migration of media for use in alternative applications.
+
 
 ## Troubleshooting
 
-### AIMMS won't start
+For detailed instructions, see the [Troubleshooting Guide](../getting-started/troubleshooting.md).
 
-- Check system requirements
-- Ensure you have extracted all files from the archive
-- Try running as administrator (Windows)
-- Check antivirus software isn't blocking the application
-
-### Project won't open
-
-- Check file permissions
-- Verify project files aren't corrupted
-- Ensure sufficient disk space
-- Try project recovery tools
-
-### Media files not loading
-
-- Check file format is supported
-- Verify file size limits aren't exceeded
-- Ensure files haven't been moved or deleted
-- Try refreshing the gallery (F5)
-
-### Performance issues
-
-- Close other applications to free memory
-- Reduce thumbnail quality in settings
-- Clear thumbnail cache if corrupted
-- Check available disk space
 
 ## Advanced Features
 
 ### Can I integrate AIMMS with other tools?
 
-Yes, AIMMS supports integration with various tools including:
-- ComfyUI for AI workflow integration
-- Project management tools
-- Cloud storage services
-- Custom integrations via API
+Version 1.0 is a passive storyboard management system but future versions will integrate with tools such as ComfyUI and LLMs via API.
+
+The `project\data\shots.db` is SQLite3 and can be accessed using python code. However, to avoid corruption be certain to keep regular backups and only access the database as read-only.
+
+`.aimms` file is provided in the `\project\data\saves` folder and updated using File → Save. This is a JSON format file which can be used to rename the `media\{shot_id}` folders for migration out of AIMMS project structure. This file is provided to keep a record of the relationships structure between media folders (named using `shot_id`) and `shot_names`.
+
+An inbound migration tool is on [github](https://github.com/mdkberry/migrating-to-aimms) for importing media into AIMMS from other platform. It provides the current version project folder structure and database schema, and is open to the public for code development to enable further integration.
+
 
 ### How do I use the starred system?
 
-The starred system helps you mark favorites:
-- Click the star icon on any shot, image, or video
-- Only one item per category can be starred
-- Starred items are highlighted for easy identification
-- Use stars to prioritize your best work
+The starred system helps you mark favorite takes:
+
+- Click the star icon in any shot in the image, or video storyboard popup take modal
+- Only one item per shot can be starred and it will appear in the preview card for that shot
+- Use stars to prioritize your best takes
 
 ### What is the routing matrix?
 
-The routing matrix is an advanced feature for managing complex workflows. It helps you organize and track media files through different processing stages.
+The routing matrix is for checking at a glance the health of media and database relationships. A green tick shows both are present. A red X means either the database or the media folder is missing an entry or has corrupted data.
+
+Fixing orphan issues in either direction is done through further analysis in the Unused page to assess what the problem is and tidy up orphan entries.
 
 ## Getting Help
 
 ### Where can I find more help?
 
-- [User Guide](../user-guide/) - Comprehensive documentation
-- [Features](../features/) - Feature-specific guides
+- [Getting Started](../getting-started/) - Comprehensive documentation on use
 - [Troubleshooting Guide](../getting-started/troubleshooting.md) - Problem-solving help
-- [Support](../support/) - Contact information and resources
 
 ### How do I report a bug?
 
-Please contact our support team through the [Support](../support/) section with details about the issue, including:
+Please log bugs on the [github issues](https://github.com/AI-Making-Movies/aimms-docs/issues) page, and be sure to include:
+
 - AIMMS version
 - Operating system
 - Steps to reproduce the issue
 - Any error messages
 
-### Can I suggest new features?
-
-Yes, we welcome feature suggestions! Please contact our support team with your ideas.
+We cannot promise instant support but issues will be tended to in as timely a manner as possible.
 
 ## Licensing and Support
 
 ### How do I activate my license?
 
 1. Launch AIMMS
-2. Enter your license key when prompted
-3. Or use **Help** → **License** to enter or manage your license
+2. Enter your license key and email when prompted
 
-### What if my license expires?
+### What if my license doesnt work?
 
-Contact our sales team to renew your license. You may still be able to access your projects in read-only mode.
+Check the [Troubleshooting Guide](../getting-started/troubleshooting.md)
+
+If that does not resolve your issue then contact point of sale with your details of purchase.
+
+You will always be to access your projects manually.
 
 ### Is there a community or forum?
 
-Check our website for community forums, user groups, and additional resources.
-
-If you have additional questions not covered here, please visit our [Support](../support/) section for more assistance.
+Check the [website](https://markdkberry.com/software/) for community forums, user groups, and additional resources.

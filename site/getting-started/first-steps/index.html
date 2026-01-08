@@ -1,0 +1,1384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive documentation for AIMMS (Artificial Intelligent Movie Making Systems)">
+      
+      
+        <meta name="author" content="AIMMS Team">
+      
+      
+        <link rel="canonical" href="https://aimms.github.io/getting-started/first-steps/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>First Steps - AIMMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#first-steps-with-aimms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AIMMS Documentation" class="md-header__button md-logo" aria-label="AIMMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18 4 2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AIMMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              First Steps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AIMMS Documentation" class="md-nav__button md-logo" aria-label="AIMMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18 4 2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4z"/></svg>
+
+    </a>
+    AIMMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Steps
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-aimms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome to AIMMS!
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your First Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create a New Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-understand-the-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Understand the Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-your-first-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Add Your First Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-media-takes-to-your-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Media (Takes) to Your Shot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Add Media (Takes) to Your Shot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-base-image-takes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Base Image "Takes"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-explore-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Explore Your Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Success
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips for Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Conventions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Efficiency:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore Advanced Features:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-with-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice with Examples:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learn-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learn Best Practices:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Common Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shot-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shot Not Appearing:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-not-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Not Loading:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Performance:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Help:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Online Resources:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="first-steps-with-aimms">First Steps with AIMMS<a class="headerlink" href="#first-steps-with-aimms" title="Permanent link">&para;</a></h1>
+<h2 id="welcome-to-aimms">Welcome to AIMMS!<a class="headerlink" href="#welcome-to-aimms" title="Permanent link">&para;</a></h2>
+<p>This guide will help you get started with AIMMS and create your first project in just a few minutes.</p>
+<h2 id="your-first-project">Your First Project<a class="headerlink" href="#your-first-project" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-create-a-new-project">Step 1: Create a New Project<a class="headerlink" href="#step-1-create-a-new-project" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Launch AIMMS</strong>:</p>
+<ul>
+<li>Double-click the AIMMS application</li>
+<li>Wait for the application to load completely</li>
+</ul>
+</li>
+<li>
+<p><strong>Create New Project</strong>:</p>
+<ul>
+<li>Click <strong>File</strong> → <strong>New Project</strong> (or press <code>Ctrl+N</code>)</li>
+<li>Enter a project name (e.g., "project_MyShortFilm")</li>
+<li>Choose a location to save your project</li>
+<li>Click <strong>Create</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Project Structure Created</strong>:</p>
+</li>
+<li>
+<p>AIMMS automatically creates this structure:</p>
+<div class="codehilite"><pre><span></span><code><span class="s">```</span>
+Your_Project/
+├── data/
+│   ├── shots.db
+│   ├── csv/
+│   ├── backup/
+│   └── saves/
+├── media/
+│   ├── {shot_id}/          
+│   ├── characters/
+│   ├── locations/
+│   └── other/
+├── logs/
+└── project_config.json
+<span class="s">```</span>
+</code></pre></div>
+
+</li>
+</ol>
+<h3 id="step-2-understand-the-interface">Step 2: Understand the Interface<a class="headerlink" href="#step-2-understand-the-interface" title="Permanent link">&para;</a></h3>
+<p>AIMMS uses a tabbed interface with 8 main modules:</p>
+<ul>
+<li><strong>Shots</strong> (Ctrl+1): Manage your shot list and details</li>
+<li><strong>Image Storyboard</strong> (Ctrl+2): View and manage base image storyboard</li>
+<li><strong>Video Storyboard</strong> (Ctrl+3): View and manage final video storyboard</li>
+<li><strong>Assets</strong> (Ctrl+4): Manage project assets (characters, locations, other)</li>
+<li><strong>Unused</strong> (Ctrl+5): Clean up unused media files</li>
+<li><strong>Settings</strong> (Ctrl+6): Configure project settings</li>
+<li><strong>Logs</strong> (Ctrl+7): View application and project logs</li>
+<li><strong>Routing</strong> (Ctrl+8): Routing health between database and media files</li>
+</ul>
+<h3 id="step-3-add-your-first-shot">Step 3: Add Your First Shot<a class="headerlink" href="#step-3-add-your-first-shot" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigate to Shots Page</strong>:</p>
+<ul>
+<li>Click the <strong>Shots</strong> tab or press <code>Ctrl+1</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Add New Shot</strong>:</p>
+<ul>
+<li>Click <strong>Add New Shot</strong> button</li>
+<li>Fill in the shot details:<ul>
+<li><strong>Order Number</strong>: 1 <em>(sequence position can be changed to re-order shots across the storyboards)</em></li>
+<li><strong>Shot Name</strong>: <code>INT_OFFICE_DAY_001</code> <em>(Unique naming is recommended but not enforced)</em></li>
+<li><strong>Section</strong>: <code>Act 1 - Opening Scene</code> <em>(group shots by sections for later filtering as projects get larger)</em></li>
+<li><strong>Description</strong>: <code>Hero enters office</code></li>
+<li><strong>Image Prompt</strong>: <code>A man sitting at a desk in a modern office</code></li>
+<li><strong>Video Prompt</strong>: <code>A man walks into an office and sits at his desk</code></li>
+<li>Add other metadata as required. <em>(All entries are optional except <code>shot_name</code> which must be provided. Though the shot name does not need to be unique, it is highly recommended to make it so.)</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Save the Shot</strong>:</p>
+<ul>
+<li>Click <strong>Save</strong> to add the shot to your project</li>
+<li>The shot will appear in the shots table</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-4-add-media-takes-to-your-shot">Step 4: Add Media (Takes) to Your Shot<a class="headerlink" href="#step-4-add-media-takes-to-your-shot" title="Permanent link">&para;</a></h3>
+<p>Media is added to shots by creating empty placeholder "Takes" then replacing them with valid media. There are two places this can be done manually: </p>
+<ol>
+<li>
+<p>From the Shots Page with "Add Takes" button (creates empty placeholder takes in both Image and Video storyboards for that shot).</p>
+</li>
+<li>
+<p>From within the shot popup modals of the Image or Video Storyboard pages (creates empty placeholder takes only in the storyboard you action it from).</p>
+</li>
+</ol>
+<h4 id="adding-base-image-takes">Adding Base Image "Takes"<a class="headerlink" href="#adding-base-image-takes" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Navigate to Images Storyboard Page</strong>:</p>
+<ul>
+<li>Click the <strong>Images</strong> tab or press <code>Ctrl+2</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Add Image Take(s)</strong>:</p>
+<ul>
+<li>Select your shot from the gallery</li>
+<li>Click "View Media" button.</li>
+<li>Click <strong>Add Take</strong> button from the popup modal for the shot.</li>
+<li>Choose the number of takes you wish to add (empty placeholders will be created)</li>
+<li>Select <strong>Replace</strong> button in the popup modal for an empty take</li>
+<li>Browse and select your valid image file <em>(workflow metadata png)</em></li>
+<li>Click <strong>Add</strong> </li>
+</ul>
+</li>
+<li>
+<p><strong>View Your Image</strong>:</p>
+<ul>
+<li>The image will appear in the gallery</li>
+<li>Double-click to view it full-size in the floating viewer</li>
+<li>Click the star icon to mark it as your favorite</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder using <code>base_image_xx.png</code> for images.</p>
+<h4 id="adding-a-video">Adding a Video<a class="headerlink" href="#adding-a-video" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Navigate to Videos Storyboard Page</strong>:</p>
+<ul>
+<li>Click the <strong>Videos</strong> tab or press <code>Ctrl+3</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Add Video Take</strong>:</p>
+<ul>
+<li>Select your shot from the gallery</li>
+<li>Click <strong>Add Take</strong></li>
+<li>Browse and select your video file</li>
+<li>Choose take number (e.g., <code>video_01</code>)</li>
+<li>Click <strong>Add</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>View Your Video</strong>:</p>
+<ul>
+<li>The video will appear in the gallery</li>
+<li>Click to play it in the floating video player</li>
+<li>Click the star icon to mark it as your favorite</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder. For the video storyboard, two empty placeholder files are created and required per take during replacement; <code>final_video_xx.mp4</code> and <code>video_workflow_xx.png</code> which is the accompanying png file that must be supplied with the video at upload <em>(it assumes a workflow metadata png file will be stored with the video, this will also be used as preview image)</em>.</p>
+<h3 id="step-5-explore-your-project">Step 5: Explore Your Project<a class="headerlink" href="#step-5-explore-your-project" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>View All Modules</strong>:</p>
+<ul>
+<li>Navigate through each tab to see your content</li>
+<li>Notice how your shot appears in all relevant modules</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Keyboard Shortcuts</strong>:</p>
+<ul>
+<li>Practice using <code>Ctrl+1</code> through <code>Ctrl+8</code> to switch tabs</li>
+<li>Try <code>Ctrl+N</code> for new project, <code>Ctrl+O</code> for open project</li>
+</ul>
+</li>
+<li>
+<p><strong>Search and Filter</strong>:</p>
+<ul>
+<li>Use the search box in the Shots Page module to find your shot</li>
+<li>Try filtering by section (bottom menu bar) to organize your view. Section filtering is retained as you navigate between pages. </li>
+<li>To show all shots change the filter back to "All Sections".</li>
+</ul>
+</li>
+</ol>
+<h2 id="essential-keyboard-shortcuts">Essential Keyboard Shortcuts<a class="headerlink" href="#essential-keyboard-shortcuts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+1</code></td>
+<td>Switch to Shots</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+2</code></td>
+<td>Switch to Images</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+3</code></td>
+<td>Switch to Videos</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+4</code></td>
+<td>Switch to Assets</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+5</code></td>
+<td>Switch to Unused</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+6</code></td>
+<td>Switch to Settings</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+7</code></td>
+<td>Switch to Logs</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+8</code></td>
+<td>Switch to Routing</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+N</code></td>
+<td>New Project</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+O</code></td>
+<td>Open Project</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+E</code></td>
+<td>Export CSV</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>Ctrl+I</code></td>
+<td>Import CSV</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>Refresh View</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>Toggle Fullscreen</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<h2 id="basic-workflow">Basic Workflow<a class="headerlink" href="#basic-workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Plan</strong>: Create shots with descriptions and prompts.</li>
+<li><strong>Generate</strong>: Use your AI tools to create images/videos based on prompts</li>
+<li><strong>Import</strong>: Add generated media to AIMMS</li>
+<li><strong>Review</strong>: View and organize your media</li>
+<li><strong>Iterate</strong>: Replace takes as needed</li>
+<li><strong>Export</strong>: Export your storyboard for sharing</li>
+</ol>
+<h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
+<h3 id="naming-conventions">Naming Conventions:<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use descriptive shot names: <code>INT_OFFICE_DAY_001</code> or <code>HWM_01A_01A_first_scene</code></li>
+<li>Include location and key action if you are familiar with that method</li>
+<li>Keep shot name management consistent and unique across your project, but be aware it is not enforced.</li>
+<li>If managing shots is new to you trial this approach: <code>HWM_01A_01A_first_scene</code> which breaksdown as: <code>{Project name}_{Scene number}_{Shot number of scene}_{short_descriptor}</code></li>
+</ul>
+<h3 id="organization">Organization:<a class="headerlink" href="#organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use sections to group related shots: <code>Act 1</code>, <code>Opening Scene</code>, <code>Climax</code>. </li>
+<li>Star your favorite takes for easy identification (Image and Video Storyboard pages)</li>
+<li>Regularly clean up unused media files (Unused page)</li>
+</ul>
+<h3 id="workflow-efficiency">Workflow Efficiency:<a class="headerlink" href="#workflow-efficiency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create all shots before adding media (ideally create a csv of all shots with their metadata, then import)</li>
+<li>Use keyboard shortcuts for faster navigation</li>
+<li>Regularly export CSV files for backup</li>
+<li>At the end of each session save (.aimms routing info), backup the database.</li>
+<li>At the end of big media import changes archive the entire project to a zip file and copy it off site.</li>
+</ul>
+<p>NOTE: We can not be held responsible for loss of data. Backups and features to rescue corrupt databases, stored connection integrity for re-creation of failed data has been provided in several ways. We highly recommend you save, backup, and archive regularly for peace of mind.</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="explore-advanced-features">Explore Advanced Features:<a class="headerlink" href="#explore-advanced-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Import Existing Data</strong>: Use CSV import to bring in existing shot lists</li>
+<li><strong>Customize Settings</strong>: Adjust themes and preferences to your liking</li>
+<li><strong>Learn Advanced Modules</strong>: Explore Assets, Logs, and Routing modules</li>
+</ul>
+<h3 id="practice-with-examples">Practice with Examples:<a class="headerlink" href="#practice-with-examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create a simple 3-shot scene</li>
+<li>Practice adding different types of media</li>
+<li>Experiment with the starred system</li>
+<li>Try the search and filtering features</li>
+</ul>
+<h3 id="learn-best-practices">Learn Best Practices:<a class="headerlink" href="#learn-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Read the detailed user guides for each module</li>
+<li>Watch video tutorials for visual learning</li>
+<li>Join the community for tips and support</li>
+</ul>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues<a class="headerlink" href="#troubleshooting-common-issues" title="Permanent link">&para;</a></h2>
+<h3 id="shot-not-appearing">Shot Not Appearing:<a class="headerlink" href="#shot-not-appearing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check that you saved the shot successfully</li>
+<li>Verify you're viewing "All Sections" in the filter</li>
+<li>Try refreshing the view with <code>F5</code></li>
+<li>If that fails change between the pages</li>
+<li>As a last resort restart the application.</li>
+</ul>
+<p><strong>NOTE</strong>: If a take or shot is still not showing up, then run the "Analyze Zeroed-Out Takes" button in Unused page. It might be there was a failure to connect the media to the database. If your shot shows there, delete it, restart the application and then try again. If the problem continues, check permissions on folders or locked files.</p>
+<h3 id="media-not-loading">Media Not Loading:<a class="headerlink" href="#media-not-loading" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ensure files are in supported formats (PNG, JPG, MP4, etc.)</li>
+<li>Check file paths are accessible</li>
+<li>Verify file sizes aren't too large</li>
+</ul>
+<p><strong>NOTE</strong>: AIMMS has been tested with a 600 shot project containing 21,000 takes with a total size of 23GB in media files and it worked fine. The only delay (1 to 2 seconds) was cache related in managing the navigation between pages (50 videos per page when caching). But this was with 3 to 5 second long clips and only a few larger ones. If your individual clips are huge (which can happen for edited sequences) then you will need to account for that in use of the Storyboard management software.</p>
+<h3 id="application-performance">Application Performance:<a class="headerlink" href="#application-performance" title="Permanent link">&para;</a></h3>
+<p>AIMMS has been made with low processing overhead in mind. This is to allow for ComfyUI to run on the same machine with it open if necessary. However, AIMMS does not need to use a GPU and has been tested running on cheap 4GB ram laptop without issue. It uses ffmpeg and ffprobe for video previewing (bundled with Windows version of AIMMS application, but those will need to be provided with Linux or OSX).</p>
+<p>It should not need much to run, but if you have problems, ensure sufficient disk space is available and that system ram is not full during use.</p>
+<p>Projects are best stored on SSD drives for speed of media loading. This could be on network or external drives. If you are storing projects on SATA or slow USB external drives this might impact speed of performance. While the AIMMS application does not need to run on SSD drive, it will perform better if it does.</p>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<h3 id="built-in-help">Built-in Help:<a class="headerlink" href="#built-in-help" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Documentation</strong>: Press <code>F1</code> or go to Help → Documentation</li>
+<li><strong>Keyboard Shortcuts</strong>: Press <code>Ctrl+K</code> or go to Help → Keyboard Shortcuts</li>
+</ul>
+<h3 id="online-resources">Online Resources:<a class="headerlink" href="#online-resources" title="Permanent link">&para;</a></h3>
+<p><em>(The below features are planned for implementation after launch)</em></p>
+<ul>
+<li><strong>User Guides</strong>: Comprehensive step-by-step instructions</li>
+<li><strong>Video Tutorials</strong>: Visual guides for common tasks </li>
+<li><strong>Community Forum</strong>: Ask questions and share tips</li>
+</ul>
+<h3 id="support">Support:<a class="headerlink" href="#support" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Logs</strong>: Check the Logs page module for error information</li>
+<li><strong>Export Data</strong>: Use export features to help track health of project data if you need to seek support</li>
+</ul>
+<p>Congratulations! You've successfully created your first AIMMS project and learned the basics. Continue exploring the application and refer to the detailed user guides as you become more familiar with the features.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/aimms/aimms" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:support@aimms.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

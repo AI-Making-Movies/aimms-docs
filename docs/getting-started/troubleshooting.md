@@ -98,7 +98,7 @@ A complete snapshot backup of the entire project is provided by the File → Arc
 **Solutions**:
 
 1. **Close Other Apps**: Free up system memory and CPU to test.
-2. **File sizes**: Check for overly large image or video files. It's recommended to work with reasonably sized images and video clips, though edited sequences have been tested over 1 minute long, they can add relative lag to the loading times at larger file size. The `.png` files are almost always loaded with workflow metadata which means >5mb is not uncommon as an average size. AI video clips tend to be only a few seconds long and AIMMS application version 1.0 has been designed around that assumption.
+2. **File sizes**: Check for overly large image or video files. It's recommended to work with reasonably sized images and video clips, though edited sequences have been tested over 1 minute long, they can add relative lag to the loading times at larger file size. The `.png` files are almost always loaded with workflow metadata which means > 10mb is not uncommon as an average size. AI video clips tend to be only a few seconds long and AIMMS application version 1.0 has been designed around that assumption.
 3. **Automatic Caching**: Large projects will use the advanced caching system which may cause storyboard pages to reload on page change *(1 to 2 seconds is possible for large file projects on the video projects page as it caches 50 previews per page, though the caching is designed around using `video_workflow_xx.png` files for previews, not the video files themselves)*
 4. **Storage type**: Projects should reside on SSD drives for faster access times. SATA drives are likely to experience slower load times, and external USB drives are recommended for archiving only, not for loading live projects.
 4. **Project Size**: The maximum project test size before product launch was 600 shots with 21,000 takes at 23 GB total project size. The advanced caching system is designed to handle any size, in theory.
@@ -234,6 +234,8 @@ When you encounter an error:
 
 ### If Requiring Support
 
+For logging issues use [**Github**](https://github.com/AI-Making-Movies/aimms-docs/issues)
+
 Prepare this information:
 
 1. **Error Details**: Exact error messages and when they occur
@@ -241,6 +243,8 @@ Prepare this information:
 3. **Steps to Reproduce**: Detailed steps to recreate the issue
 4. **Log Files**: Relevant log entries from the Logs module
 5. **Screenshots**: Visual documentation of the problem
+
+We cannot offer instant support but issues will be tended to in as timely a manner as possible.
 
 ### Preventive Measures
 
@@ -252,4 +256,5 @@ To minimize issues:
 4. **Proper Shutdown**: Always close AIMMS properly before shutting down
 5. **Documentation**: Keep notes on your workflow process and configurations
 
-Remember: Most issues can be resolved with the steps above. If you're still experiencing problems, contact the developer. AIMMS does not offer instant support at this time, however we will endeavour to address any concerns as quickly as possible.
+Remember: Most issues can be resolved with the steps above. If you're still experiencing problems, log an issue on [**Github**](https://github.com/AI-Making-Movies/aimms-docs/issues)
+. AIMMS does not offer instant support at this time, however we will endeavour to address any concerns as quickly as possible.

@@ -147,11 +147,13 @@ AIMMS is distributed as a standalone application:
 ### Built-in Help
 - **Documentation**: Access via Help → Documentation *(This website)*
 
+
 ### Online Resources
 - [**Official Website**](https://markdkberry.com/software/): Visit for latest downloads and news
 - [**Documentation**](https://ai-making-movies.github.io/aimms-docs/): Comprehensive user guides and tutorials
 - **Community Forum**: User discussions and support *(planned)*
 - [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
+- [**Logging Issues**](https://github.com/AI-Making-Movies/aimms-docs/issues): Github issues 
 
 
 ## Next Steps

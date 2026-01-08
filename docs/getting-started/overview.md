@@ -89,8 +89,7 @@ project_root/
 ├── media/                   # Shot media files
 │   ├── 1/                   # Shot 1 folder (shot_id not shot_name)
 │   ├── 2/                   # Shot 2 folder
-│   └── ...                  # Additional shot folders
-├── assets/
+│   ├── ...                  # Additional shot folders
 │   ├── characters/          # character assets
 │   ├── locations/           # location assets
 │   └── other/               # other assets
