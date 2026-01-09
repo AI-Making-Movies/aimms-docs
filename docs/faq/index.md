@@ -144,7 +144,7 @@ Fixing orphan issues in either direction is done through further analysis in the
 
 ### Where can I find more help?
 
-- [Getting Started](../getting-started/) - Comprehensive documentation on use
+- [Getting Started](../getting-started/first-steps.md) - Comprehensive documentation on use
 - [Troubleshooting Guide](../getting-started/troubleshooting.md) - Problem-solving help
 
 ### How do I report a bug?
