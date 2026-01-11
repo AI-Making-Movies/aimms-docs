@@ -260,15 +260,14 @@ Projects are best stored on SSD drives for speed of media loading. This could be
 
 ### Online Resources:
 
-*(The below features are planned for implementation after launch)*
-
-- **User Guides**: Comprehensive step-by-step instructions
-- **Video Tutorials**: Visual guides for common tasks 
-- **Community Forum**: Ask questions and share tips
+- [**Official Website**](https://markdkberry.com/software/): Visit for latest downloads and news
+- [**Documentation**](https://ai-making-movies.github.io/aimms-docs/): Comprehensive user guides
+- [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
+- **Community Forum**: User discussions and support *(planned)*
 
 ### Support:
 
 - **Logs**: Check the Logs page module for error information
-- **Export Data**: Use export features to help track health of project data if you need to seek support
+- **Export Data**: Use export features to help track health of project data
 
 Congratulations! You've successfully created your first AIMMS project and learned the basics. Continue exploring the application and refer to the detailed user guides as you become more familiar with the features.

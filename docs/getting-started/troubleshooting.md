@@ -230,21 +230,7 @@ When you encounter an error:
 1. **Access Logs**: Go to Logs page (Ctrl+7)
 2. **Filter by Time**: Focus on recent log entries (timestamps should be in UTC)
 3. **Search for Errors**: Look for ERROR or WARNING level messages. WARNING messages are notification only, but ERROR messages will need to be addressed.
-4. **Export Logs**: Export relevant logs for support analysis. Logs are in text file format and will open from the Logs page using your default text editor, so can be saved externally.
-
-### If Requiring Support
-
-For logging issues use [**Github**](https://github.com/AI-Making-Movies/aimms-docs/issues)
-
-Prepare this information:
-
-1. **Error Details**: Exact error messages and when they occur
-2. **System Information**: Operating system, AIMMS version, hardware specs
-3. **Steps to Reproduce**: Detailed steps to recreate the issue
-4. **Log Files**: Relevant log entries from the Logs module
-5. **Screenshots**: Visual documentation of the problem
-
-We cannot offer instant support but issues will be tended to in as timely a manner as possible.
+4. **Export Logs**: Export relevant logs for analysis. Logs are in text file format and will open from the Logs page using your default text editor, so can be saved externally.
 
 ### Preventive Measures
 
@@ -255,6 +241,3 @@ To minimize issues:
 3. **System Maintenance**: Regular system cleanup and optimization using Unused page features and Routing Matrix checks
 4. **Proper Shutdown**: Always close AIMMS properly before shutting down
 5. **Documentation**: Keep notes on your workflow process and configurations
-
-Remember: Most issues can be resolved with the steps above. If you're still experiencing problems, log an issue on [**Github**](https://github.com/AI-Making-Movies/aimms-docs/issues)
-. AIMMS does not offer instant support at this time, however we will endeavour to address any concerns as quickly as possible.

@@ -147,18 +147,7 @@ Fixing orphan issues in either direction is done through further analysis in the
 - [Getting Started](../getting-started/first-steps.md) - Comprehensive documentation on use
 - [Troubleshooting Guide](../getting-started/troubleshooting.md) - Problem-solving help
 
-### How do I report a bug?
-
-Please log bugs on the [github issues](https://github.com/AI-Making-Movies/aimms-docs/issues) page, and be sure to include:
-
-- AIMMS version
-- Operating system
-- Steps to reproduce the issue
-- Any error messages
-
-We cannot promise instant support but issues will be tended to in as timely a manner as possible.
-
-## Licensing and Support
+## Licensing
 
 ### How do I activate my license?
 
@@ -175,4 +164,9 @@ You will always be to access your projects manually.
 
 ### Is there a community or forum?
 
-Check the [website](https://markdkberry.com/software/) for community forums, user groups, and additional resources.
+Check the [website](https://markdkberry.com/software/) for future community forums, and additional resources.
+
+- [**Official Website**](https://markdkberry.com/software/): Visit for latest downloads and news
+- [**Documentation**](https://ai-making-movies.github.io/aimms-docs/): Comprehensive user guides
+- [**Video Tutorials**](https://www.youtube.com/@markdkberry): Step-by-step video guides
+- **Community Forum**: User discussions and support *(planned)*
