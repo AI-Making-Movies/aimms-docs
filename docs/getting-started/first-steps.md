@@ -6,11 +6,14 @@ This guide will help you get started with AIMMS and create your first project in
 
 ## Your First Project
 
+For first time setup of licensing see [installation](../getting-started/installation.md)
+
 ### Step 1: Create a New Project
 
 1. **Launch AIMMS**:
     
-    - Double-click the AIMMS application
+    - Windows: Double-click the `AIMMS.exe` application
+    - Linux: launch `./main-aimms_qt.bin`
     - Wait for the application to load completely
 
 2. **Create New Project**:
@@ -188,19 +191,20 @@ Media is added to shots by creating empty placeholder "Takes" then replacing the
 
 ### Organization:
 
-- Use sections to group related shots: `Act 1`, `Opening Scene`, `Climax`. 
+- Use sections to group related shots: `Act 1`, `Opening Scene`, `Climax`. *(You may find numbering these helps for sorting later. e.g `1 - Opening Scene`. You can change them at any time and change multiple rows by selecting them and editing group fields)*.
 - Star your favorite takes for easy identification (Image and Video Storyboard pages)
-- Regularly clean up unused media files (Unused page)
+- Regularly clean up unused media placeholder files (Unused page) that get created when adding takes and shots.
 
 ### Workflow Efficiency:
 
-- Create all shots before adding media (ideally create a csv of all shots with their metadata, then import)
+- Create all shots before adding media. Ideally create a csv of all shots with their metadata, then import. *(You can import a csv at any time and can have identically named `shot names` without issue, so importing a csv will not fail over duplicated names, `shot_id` is automated and controls the unique identity of each shot)*.
 - Use keyboard shortcuts for faster navigation
 - Regularly export CSV files for backup
 - At the end of each session save (.aimms routing info), backup the database.
 - At the end of big media import changes archive the entire project to a zip file and copy it off site.
+- If you lose control of a large media project, look at the AIMMS migration software as a solution to restructure a project. With it you can import csv of metadata and relocate media files into a valid AIMMS project format. This is one of the reasons for the migration code to be created.
 
-NOTE: We can not be held responsible for loss of data. Backups and features to rescue corrupt databases, stored connection integrity for re-creation of failed data has been provided in several ways. We highly recommend you save, backup, and archive regularly for peace of mind.
+***IMPORTANT NOTE:*** We can not be held responsible for loss of data in using this software but have taken every precaution to provide ways to re-establish integrity of a corrupt project. Backups and features to rescue corrupt databases are there to help in the case of failed project integrity. We highly recommend you save, backup, and archive regularly for peace of mind.
 
 ## Next Steps
 
@@ -208,7 +212,7 @@ NOTE: We can not be held responsible for loss of data. Backups and features to r
 
 - **Import Existing Data**: Use CSV import to bring in existing shot lists
 - **Customize Settings**: Adjust themes and preferences to your liking
-- **Learn Advanced Modules**: Explore Assets, Logs, and Routing modules
+- **Learn Advanced Modules**: Explore Assets, Logs, and Routing matrix.
 
 ### Practice with Examples:
 
@@ -221,7 +225,7 @@ NOTE: We can not be held responsible for loss of data. Backups and features to r
 
 - Read the detailed user guides for each module
 - Watch video tutorials for visual learning
-- Join the community for tips and support
+- Join the Patreon (free tier) for latest information and news
 
 ## Troubleshooting Common Issues
 
