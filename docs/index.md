@@ -1,8 +1,8 @@
 # AIMMS Documentation
 
-***AIMMS initial launch is now underway. Documentation process is under construction and will be recieving regular updates. A series of [short video tutorials](https://www.youtube.com/watch?v=kVy8EBrjd0w&list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) on use will be created first. - 31st Jan 2026***
+## Welcome to the documentation for **AIMMS** *(Artificial Intelligent Movie Management System)*.
 
-Welcome to the documentation for **AIMMS** *(Artificial Intelligent Movie Management System)*.
+***AIMMS initial launch is now underway, join [Patreon (Free Tier)](https://www.patreon.com/posts/aimms-vrs-1-0-149695165) to get access to the downloads. Documentation is ongoing. A series of [short video tutorials](https://www.youtube.com/watch?v=kVy8EBrjd0w&list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) on use available now to Patreon members, will be available to the public at full launch. - Feb 2026***
 
 ![AIMMS version 1.0.0 (StorM)](images/general/about-image.png)
 
@@ -10,20 +10,22 @@ Welcome to the documentation for **AIMMS** *(Artificial Intelligent Movie Manage
 
 **AIMMS version 1.0 (StorM)** is a passive storyboard management system designed for tracking image and video clips, shot metadata, assets, and workflows used in the creation of AI-generated short films.
 
+It's something I needed after running into "shot tracking overwhelm" using only a csv. So, I built it for myself and was soon being asked for access to it. This is the result of that. I hope it is of benefit to you too.
+
 AIMMS runs locally, is cross-platform, and does not require a GPU. It is suitable for both small and large projects (tested up to 21,000 takes across 600 shots).
 
 Future versions may integrate directly with ComfyUI via API and may include optional advanced LLM-assisted prompting and batch rendering features.
 
-Additional tools, such as the [**AIMMS migration tool**](https://github.com/mdkberry/migrating-to-aimms) *(in development)*, are available to assist with onboarding existing projects.
+Additional tools, such as the [**AIMMS migration tool**](https://github.com/mdkberry/migrating-to-aimms) *(in development)*, are available to assist with onboarding existing media sets.
 
 ---
 
 ## Learning & Resources
 
-- Tutorials, walkthroughs, and feature discussions will be published on the YouTube channel  
-  [**@markdkberry**](https://www.youtube.com/@markdkberry)
+- For immediate access to the latest AIMMS tutorials, info, and updates join the [Patreon (Free tier)](https://www.patreon.com/posts/aimms-vrs-1-0-149695165)
 
-- Short video [tutorials on using AIMMS](https://www.youtube.com/watch?v=kVy8EBrjd0w&list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) will be serve as the best starting point while this site develops.
+- Tutorials, walkthroughs, and feature discussions will be published (at public launch time) on the YouTube channel  
+  [**@markdkberry**](https://www.youtube.com/@markdkberry)
 
 - For ComfyUI workflows, research notes, and free resources, visit  
   [**Research & Workflows**](https://markdkberry.com/workflows/research/)
@@ -31,6 +33,8 @@ Additional tools, such as the [**AIMMS migration tool**](https://github.com/mdkb
 ---
 
 ## Licensing & Support
+
+- A one-time 30-day trial is included as part of the download. After that a license will need to be purchased for use.
 
 - AIMMS is a **one-time purchase** desktop application. Purchasing a license grants you the right to use the software as-is.
 
@@ -53,8 +57,8 @@ This approach allows AIMMS to remain a focused, independently developed tool rat
 - AIMMS is developed and maintained by  
   [**MarkDKBerry.com**](https://www.markdkberry.com)
 
-- Licenses *(coming in the next few days)* can be purchased via  
-  [**The Online Store**](https://markdkberry-shop.fourthwall.com)
+- Licenses *(coming soon)* can be purchased via  
+  [**Stripe**](). A 30-day trial can be started after launch in the meantime.
 
 
 
