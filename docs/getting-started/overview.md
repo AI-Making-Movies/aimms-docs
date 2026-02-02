@@ -14,7 +14,7 @@ A project in AIMMS represents your entire film or video production. Each project
 - **Shots**: Individual shot list; csv column styled database of shot information.
 - **Images**: Base images for each shot containing workflow metadata.
 - **Videos**: Final video outputs for each shot with associated workflow metadata png files.
-- **Assets**: Characters, locations, and other asset types (images and 3d models).
+- **Assets**: Characters, locations, and other asset types (images and 3d models mostly, though video and audio can be uploaded).
 
 ### Shots
 Shots are the fundamental building blocks of your project. Each shot contains:
@@ -28,7 +28,7 @@ Shots are the fundamental building blocks of your project. Each shot contains:
 
 ### Storyboards
 
-There are two seperate storyboards but they share the same shot name database entries.
+There are two seperate storyboards but they share the same shot database entries.
 
 - **"Image Storyboard"**
 - **"Video Storyboard"**

@@ -942,12 +942,14 @@
 <h2 id="welcome-to-aimms">Welcome to AIMMS!<a class="headerlink" href="#welcome-to-aimms" title="Permanent link">&para;</a></h2>
 <p>This guide will help you get started with AIMMS and create your first project in just a few minutes.</p>
 <h2 id="your-first-project">Your First Project<a class="headerlink" href="#your-first-project" title="Permanent link">&para;</a></h2>
+<p>For first time setup of licensing see <a href="../installation/">installation</a></p>
 <h3 id="step-1-create-a-new-project">Step 1: Create a New Project<a class="headerlink" href="#step-1-create-a-new-project" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong>Launch AIMMS</strong>:</p>
 <ul>
-<li>Double-click the AIMMS application</li>
+<li>Windows: Double-click the <code>AIMMS.exe</code> application</li>
+<li>Linux: launch <code>./main-aimms_qt.bin</code></li>
 <li>Wait for the application to load completely</li>
 </ul>
 </li>
@@ -1222,25 +1224,26 @@ Your_Project/
 </ul>
 <h3 id="organization">Organization:<a class="headerlink" href="#organization" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Use sections to group related shots: <code>Act 1</code>, <code>Opening Scene</code>, <code>Climax</code>. </li>
+<li>Use sections to group related shots: <code>Act 1</code>, <code>Opening Scene</code>, <code>Climax</code>. <em>(You may find numbering these helps for sorting later. e.g <code>1 - Opening Scene</code>. You can change them at any time and change multiple rows by selecting them and editing group fields)</em>.</li>
 <li>Star your favorite takes for easy identification (Image and Video Storyboard pages)</li>
-<li>Regularly clean up unused media files (Unused page)</li>
+<li>Regularly clean up unused media placeholder files (Unused page) that get created when adding takes and shots.</li>
 </ul>
 <h3 id="workflow-efficiency">Workflow Efficiency:<a class="headerlink" href="#workflow-efficiency" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Create all shots before adding media (ideally create a csv of all shots with their metadata, then import)</li>
+<li>Create all shots before adding media. Ideally create a csv of all shots with their metadata, then import. <em>(You can import a csv at any time and can have identically named <code>shot names</code> without issue, so importing a csv will not fail over duplicated names, <code>shot_id</code> is automated and controls the unique identity of each shot)</em>.</li>
 <li>Use keyboard shortcuts for faster navigation</li>
 <li>Regularly export CSV files for backup</li>
 <li>At the end of each session save (.aimms routing info), backup the database.</li>
 <li>At the end of big media import changes archive the entire project to a zip file and copy it off site.</li>
+<li>If you lose control of a large media project, look at the AIMMS migration software as a solution to restructure a project. With it you can import csv of metadata and relocate media files into a valid AIMMS project format. This is one of the reasons for the migration code to be created.</li>
 </ul>
-<p>NOTE: We can not be held responsible for loss of data. Backups and features to rescue corrupt databases, stored connection integrity for re-creation of failed data has been provided in several ways. We highly recommend you save, backup, and archive regularly for peace of mind.</p>
+<p><strong><em>IMPORTANT NOTE:</em></strong> We can not be held responsible for loss of data in using this software but have taken every precaution to provide ways to re-establish integrity of a corrupt project. Backups and features to rescue corrupt databases are there to help in the case of failed project integrity. We highly recommend you save, backup, and archive regularly for peace of mind.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <h3 id="explore-advanced-features">Explore Advanced Features:<a class="headerlink" href="#explore-advanced-features" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Import Existing Data</strong>: Use CSV import to bring in existing shot lists</li>
 <li><strong>Customize Settings</strong>: Adjust themes and preferences to your liking</li>
-<li><strong>Learn Advanced Modules</strong>: Explore Assets, Logs, and Routing modules</li>
+<li><strong>Learn Advanced Modules</strong>: Explore Assets, Logs, and Routing matrix.</li>
 </ul>
 <h3 id="practice-with-examples">Practice with Examples:<a class="headerlink" href="#practice-with-examples" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1253,7 +1256,7 @@ Your_Project/
 <ul>
 <li>Read the detailed user guides for each module</li>
 <li>Watch video tutorials for visual learning</li>
-<li>Join the community for tips and support</li>
+<li>Join the Patreon (free tier) for latest information and news</li>
 </ul>
 <h2 id="troubleshooting-common-issues">Troubleshooting Common Issues<a class="headerlink" href="#troubleshooting-common-issues" title="Permanent link">&para;</a></h2>
 <h3 id="shot-not-appearing">Shot Not Appearing:<a class="headerlink" href="#shot-not-appearing" title="Permanent link">&para;</a></h3>

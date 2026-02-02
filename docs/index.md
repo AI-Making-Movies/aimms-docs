@@ -61,5 +61,5 @@ This approach allows AIMMS to remain a focused, independently developed tool rat
   [**Stripe**](). A 30-day trial can be started after launch in the meantime.
 
 
-
+***Now go to the top menu and select "Getting Started"***
 
