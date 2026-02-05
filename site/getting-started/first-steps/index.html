@@ -586,10 +586,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-base-image-takes" class="md-nav__link">
+  <a href="#adding-takes-in-just-the-image-storyboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding Base Image "Takes"
+        Adding "Takes" In Just The Image Storyboard
       
     </span>
   </a>
@@ -597,10 +597,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-a-video" class="md-nav__link">
+  <a href="#adding-takes-in-just-the-video-storyboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding a Video
+        Adding "Takes" In Just The Video Storyboard
       
     </span>
   </a>
@@ -663,10 +663,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#naming-conventions" class="md-nav__link">
+  <a href="#shot-naming-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Naming Conventions:
+        Shot Naming Conventions:
       
     </span>
   </a>
@@ -685,10 +685,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#workflow-efficiency" class="md-nav__link">
+  <a href="#workflow-efficiency-tips-tricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow Efficiency:
+        Workflow Efficiency (Tips &amp; Tricks):
       
     </span>
   </a>
@@ -941,6 +941,7 @@
 <h1 id="first-steps-with-aimms">First Steps with AIMMS<a class="headerlink" href="#first-steps-with-aimms" title="Permanent link">&para;</a></h1>
 <h2 id="welcome-to-aimms">Welcome to AIMMS!<a class="headerlink" href="#welcome-to-aimms" title="Permanent link">&para;</a></h2>
 <p>This guide will help you get started with AIMMS and create your first project in just a few minutes.</p>
+<p>Check the <a href="https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN"><strong>Video Tutorials</strong></a> for up to date information on use.</p>
 <h2 id="your-first-project">Your First Project<a class="headerlink" href="#your-first-project" title="Permanent link">&para;</a></h2>
 <p>For first time setup of licensing see <a href="../installation/">installation</a></p>
 <h3 id="step-1-create-a-new-project">Step 1: Create a New Project<a class="headerlink" href="#step-1-create-a-new-project" title="Permanent link">&para;</a></h3>
@@ -948,17 +949,19 @@
 <li>
 <p><strong>Launch AIMMS</strong>:</p>
 <ul>
-<li>Windows: Double-click the <code>AIMMS.exe</code> application</li>
-<li>Linux: launch <code>./main-aimms_qt.bin</code></li>
+<li><em>Windows</em>: Double-click the <code>AIMMS.exe</code> application</li>
+<li><em>Linux</em>: launch <code>./main-aimms_qt.bin</code></li>
 <li>Wait for the application to load completely</li>
+<li>A console window will provide debug information <em>(this will be possible to hide in future versions)</em></li>
 </ul>
 </li>
 <li>
 <p><strong>Create New Project</strong>:</p>
 <ul>
+<li><em>(First time use will offer a dialogue popup to browse or create a a new project)</em></li>
 <li>Click <strong>File</strong> → <strong>New Project</strong> (or press <code>Ctrl+N</code>)</li>
 <li>Enter a project name (e.g., "project_MyShortFilm")</li>
-<li>Choose a location to save your project</li>
+<li>Choose a location to save your project <em>(do not save projects to the application folder)</em></li>
 <li>Click <strong>Create</strong></li>
 </ul>
 </li>
@@ -971,6 +974,7 @@
 Your_Project/
 ├── data/
 │   ├── shots.db
+│   ├── shot_name_mapping.json
 │   ├── csv/
 │   ├── backup/
 │   └── saves/
@@ -987,7 +991,7 @@ Your_Project/
 </li>
 </ol>
 <h3 id="step-2-understand-the-interface">Step 2: Understand the Interface<a class="headerlink" href="#step-2-understand-the-interface" title="Permanent link">&para;</a></h3>
-<p>AIMMS uses a tabbed interface with 8 main modules:</p>
+<p>AIMMS uses a tabbed interface with 8 main page modules:</p>
 <ul>
 <li><strong>Shots</strong> (Ctrl+1): Manage your shot list and details</li>
 <li><strong>Image Storyboard</strong> (Ctrl+2): View and manage base image storyboard</li>
@@ -1012,12 +1016,12 @@ Your_Project/
 <li>Click <strong>Add New Shot</strong> button</li>
 <li>Fill in the shot details:<ul>
 <li><strong>Order Number</strong>: 1 <em>(sequence position can be changed to re-order shots across the storyboards)</em></li>
-<li><strong>Shot Name</strong>: <code>INT_OFFICE_DAY_001</code> <em>(Unique naming is recommended but not enforced)</em></li>
-<li><strong>Section</strong>: <code>Act 1 - Opening Scene</code> <em>(group shots by sections for later filtering as projects get larger)</em></li>
+<li><strong>Shot Name</strong>: <code>INT_OFFICE_DAY_001</code> <em>(Unique naming is recommended but not enforced)</em>. (One approach is to use <code>HWM_01A_01A_first_scene</code> which breaksdown as: <em><code>{Project name}_{Scene number}_{Shot number of scene}_{short_descriptor}</code></em>)</li>
+<li><strong>Section</strong>: <code>1. Opening Scene</code> <em>(group shots by sections for later filtering as projects get larger)</em></li>
 <li><strong>Description</strong>: <code>Hero enters office</code></li>
-<li><strong>Image Prompt</strong>: <code>A man sitting at a desk in a modern office</code></li>
+<li><strong>Image Prompt</strong>: <code>A man walking into a modern office</code></li>
 <li><strong>Video Prompt</strong>: <code>A man walks into an office and sits at his desk</code></li>
-<li>Add other metadata as required. <em>(All entries are optional except <code>shot_name</code> which must be provided. Though the shot name does not need to be unique, it is highly recommended to make it so.)</em></li>
+<li>Add other metadata as required. <em>(All entries are optional except <code>shot_name</code> which must be provided though duplicates are accepted. Default entries will be created if not imported from CSV. The shot name does not need to be unique, but it is recommended to make it so.)</em></li>
 </ul>
 </li>
 </ul>
@@ -1026,21 +1030,21 @@ Your_Project/
 <p><strong>Save the Shot</strong>:</p>
 <ul>
 <li>Click <strong>Save</strong> to add the shot to your project</li>
-<li>The shot will appear in the shots table</li>
+<li>The shot will appear in the shots table and will create empty media placeholders in both "Image" and "Video" storyboard pages.</li>
 </ul>
 </li>
 </ol>
 <h3 id="step-4-add-media-takes-to-your-shot">Step 4: Add Media (Takes) to Your Shot<a class="headerlink" href="#step-4-add-media-takes-to-your-shot" title="Permanent link">&para;</a></h3>
-<p>Media is added to shots by creating empty placeholder "Takes" then replacing them with valid media. There are two places this can be done manually: </p>
+<p>Media is added to shots by creating empty placeholder "Takes" then replacing them with valid media. There are three places this can be done manually <em>(placeholders are created automatically when importing from CSV)</em>: </p>
 <ol>
 <li>
-<p>From the Shots Page with "Add Takes" button (creates empty placeholder takes in both Image and Video storyboards for that shot).</p>
+<p>From the Shots Page with "Add Takes" button <em>(will create empty placeholder takes in both Image and Video storyboards for that shot)</em>.</p>
 </li>
 <li>
-<p>From within the shot popup modals of the Image or Video Storyboard pages (creates empty placeholder takes only in the storyboard you action it from).</p>
+<p>From within the shot popup modals of the "Image" or "Video" Storyboard pages <em>(creates empty placeholder takes only in the storyboard you action it from)</em>.</p>
 </li>
 </ol>
-<h4 id="adding-base-image-takes">Adding Base Image "Takes"<a class="headerlink" href="#adding-base-image-takes" title="Permanent link">&para;</a></h4>
+<h4 id="adding-takes-in-just-the-image-storyboard">Adding "Takes" In Just The Image Storyboard<a class="headerlink" href="#adding-takes-in-just-the-image-storyboard" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Navigate to Images Storyboard Page</strong>:</p>
@@ -1053,10 +1057,10 @@ Your_Project/
 <ul>
 <li>Select your shot from the gallery</li>
 <li>Click "View Media" button.</li>
-<li>Click <strong>Add Take</strong> button from the popup modal for the shot.</li>
-<li>Choose the number of takes you wish to add (empty placeholders will be created)</li>
+<li>Click <strong>Add Take</strong> button from the popup modal <em>(found on the last take of that shot)</em>.</li>
+<li>Choose the number of takes you wish to add <em>(empty placeholders will be created only in the "Images" storyboard)</em></li>
 <li>Select <strong>Replace</strong> button in the popup modal for an empty take</li>
-<li>Browse and select your valid image file <em>(workflow metadata png)</em></li>
+<li>Browse and select your valid image file <em>(workflow metadata png is recommended)</em></li>
 <li>Click <strong>Add</strong> </li>
 </ul>
 </li>
@@ -1065,12 +1069,13 @@ Your_Project/
 <ul>
 <li>The image will appear in the gallery</li>
 <li>Double-click to view it full-size in the floating viewer</li>
-<li>Click the star icon to mark it as your favorite</li>
+<li>Click the star icon to mark it as your favorite <em>(selectable in the popup modal for the shot)</em></li>
+<li>If the image contains workflow metadata, that can be viewed or downloaded from the button on the preview card.</li>
 </ul>
 </li>
 </ol>
-<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder using <code>base_image_xx.png</code> for images.</p>
-<h4 id="adding-a-video">Adding a Video<a class="headerlink" href="#adding-a-video" title="Permanent link">&para;</a></h4>
+<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder using <code>base_image_xx.png</code> for images. A json file <code>/project_Your_Project/data/shot_name_mapping.json</code> maintains a record of the relationship between <code>shot_name</code> and the <code>\media\{shot_id}\</code> folder for migration out if required.</p>
+<h4 id="adding-takes-in-just-the-video-storyboard">Adding "Takes" In Just The Video Storyboard<a class="headerlink" href="#adding-takes-in-just-the-video-storyboard" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Navigate to Videos Storyboard Page</strong>:</p>
@@ -1082,9 +1087,11 @@ Your_Project/
 <p><strong>Add Video Take</strong>:</p>
 <ul>
 <li>Select your shot from the gallery</li>
-<li>Click <strong>Add Take</strong></li>
-<li>Browse and select your video file</li>
-<li>Choose take number (e.g., <code>video_01</code>)</li>
+<li>Click "View Media" button.</li>
+<li>Click <strong>Add Take</strong> button from the popup modal <em>(found on the last take of that shot)</em>.</li>
+<li>Choose the number of takes you wish to add <em>(empty placeholders will be created only in the "Video" storyboard)</em></li>
+<li>Select <strong>Replace</strong> button in the popup modal for an empty take</li>
+<li>Browse and select your video file and then browse and select your thumbnail image for the video <em>(workflow metadata png file is recommended)</em></li>
 <li>Click <strong>Add</strong></li>
 </ul>
 </li>
@@ -1093,11 +1100,13 @@ Your_Project/
 <ul>
 <li>The video will appear in the gallery</li>
 <li>Click to play it in the floating video player</li>
-<li>Click the star icon to mark it as your favorite</li>
+<li>Click the star icon to mark your favorite take <em>(selected from within the popup modal)</em></li>
+<li>If the associated video image contains workflow metadata, that can be viewed or downloaded from the button on the shot preview card.</li>
 </ul>
 </li>
 </ol>
-<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder. For the video storyboard, two empty placeholder files are created and required per take during replacement; <code>final_video_xx.mp4</code> and <code>video_workflow_xx.png</code> which is the accompanying png file that must be supplied with the video at upload <em>(it assumes a workflow metadata png file will be stored with the video, this will also be used as preview image)</em>.</p>
+<p><strong>Note</strong>: Imported media will not retain their file names on import, but will be renamed and added to the <code>\media\{shot_id}\</code> folder. For the video storyboard, two files are required per take during replacement: <code>final_video_xx.mp4</code> and <code>video_workflow_xx.png</code>. It is recommended to use the accompanying workflow metadata png file for the video, but any image can serve as preview image thumbnail. An image must be provided with the video at upload.</p>
+<p>A json file <code>/project_Your_Project/data/shot_name_mapping.json</code> maintains a record of the relationship between <code>shot_name</code> and the <code>\media\{shot_id}\</code> folder for migration out if required.</p>
 <h3 id="step-5-explore-your-project">Step 5: Explore Your Project<a class="headerlink" href="#step-5-explore-your-project" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -1111,14 +1120,15 @@ Your_Project/
 <p><strong>Use Keyboard Shortcuts</strong>:</p>
 <ul>
 <li>Practice using <code>Ctrl+1</code> through <code>Ctrl+8</code> to switch tabs</li>
-<li>Try <code>Ctrl+N</code> for new project, <code>Ctrl+O</code> for open project</li>
+<li>A list of keyboard shortcuts are provided from the "Project" menu dropdown</li>
 </ul>
 </li>
 <li>
 <p><strong>Search and Filter</strong>:</p>
 <ul>
-<li>Use the search box in the Shots Page module to find your shot</li>
-<li>Try filtering by section (bottom menu bar) to organize your view. Section filtering is retained as you navigate between pages. </li>
+<li>Use the search box in the Shots page to find your shot. This works in combination with the "Column Picker" to help refine your search.</li>
+<li>Type in the letters and the database list of shots will be reduced to those choices <em>(based on selected columns in the "Column Picker")</em></li>
+<li>Alternatively, try filtering by section <em>(bottom menu bar)</em> to reduce your view. Section filtering is retained as you navigate between the "Shot", "Image", and "Video" pages. </li>
 <li>To show all shots change the filter back to "All Sections".</li>
 </ul>
 </li>
@@ -1207,43 +1217,71 @@ Your_Project/
 </table>
 <h2 id="basic-workflow">Basic Workflow<a class="headerlink" href="#basic-workflow" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Plan</strong>: Create shots with descriptions and prompts.</li>
+<li><strong>Plan</strong>: Create shots with descriptions and prompts within AIMMS, or import from CSV.</li>
 <li><strong>Generate</strong>: Use your AI tools to create images/videos based on prompts</li>
 <li><strong>Import</strong>: Add generated media to AIMMS</li>
 <li><strong>Review</strong>: View and organize your media</li>
-<li><strong>Iterate</strong>: Replace takes as needed</li>
-<li><strong>Export</strong>: Export your storyboard for sharing</li>
+<li><strong>Iterate</strong>: Add, Delete, or Replace takes as needed</li>
+<li><strong>Organise</strong>: Re-order, manage, or change your shot plan</li>
+<li><strong>Export</strong>: Export your storyboard for backup or sharing</li>
 </ol>
 <h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
-<h3 id="naming-conventions">Naming Conventions:<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<h3 id="shot-naming-conventions">Shot Naming Conventions:<a class="headerlink" href="#shot-naming-conventions" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Use descriptive shot names: <code>INT_OFFICE_DAY_001</code> or <code>HWM_01A_01A_first_scene</code></li>
-<li>Include location and key action if you are familiar with that method</li>
-<li>Keep shot name management consistent and unique across your project, but be aware it is not enforced.</li>
-<li>If managing shots is new to you trial this approach: <code>HWM_01A_01A_first_scene</code> which breaksdown as: <code>{Project name}_{Scene number}_{Shot number of scene}_{short_descriptor}</code></li>
+<li>If managing shots is new to you trial this approach: <code>HWM_01A_01A_first_scene</code> which breaksdown as: <em><code>{Project name}_{Scene number}_{Shot number of scene}_{short_descriptor}</code></em></li>
+<li>It's recommended to keep your shot name management consistent and unique across your project, but it is not enforced in the column entry. This allows for maximum flexibility across different methodologies</li>
 </ul>
 <h3 id="organization">Organization:<a class="headerlink" href="#organization" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Use sections to group related shots: <code>Act 1</code>, <code>Opening Scene</code>, <code>Climax</code>. <em>(You may find numbering these helps for sorting later. e.g <code>1 - Opening Scene</code>. You can change them at any time and change multiple rows by selecting them and editing group fields)</em>.</li>
-<li>Star your favorite takes for easy identification (Image and Video Storyboard pages)</li>
-<li>Regularly clean up unused media placeholder files (Unused page) that get created when adding takes and shots.</li>
+<li>Use sections to group related shots: <code>Act 1</code>, <code>1. Opening Scene</code>, <code>Climax</code>. <em>(You may find numbering these helps for sorting later. You can change them at any time and change multiple rows to unified section names by selecting groups of rows for multi-editing)</em>.</li>
+<li>Star your favorite takes for easy identification <em>(found in the shot popup modal of the Image and Video Storyboard pages)</em></li>
+<li>Regularly clean up unused media placeholder files <em>(Unused page module)</em> that accumulate when adding multiple takes and shots.</li>
 </ul>
-<h3 id="workflow-efficiency">Workflow Efficiency:<a class="headerlink" href="#workflow-efficiency" title="Permanent link">&para;</a></h3>
+<p>A json file <code>/project_Your_Project/data/shot_name_mapping.json</code> maintains a record of the relationship between <code>shot_name</code> and the <code>\media\{shot_id}\</code> folder for migration out if required. A copy of this file is automatically backed up to the <code>\backup</code> folder and cycled on a 30-day retention policy.</p>
+<h3 id="workflow-efficiency-tips-tricks">Workflow Efficiency (Tips &amp; Tricks):<a class="headerlink" href="#workflow-efficiency-tips-tricks" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Create all shots before adding media. Ideally create a csv of all shots with their metadata, then import. <em>(You can import a csv at any time and can have identically named <code>shot names</code> without issue, so importing a csv will not fail over duplicated names, <code>shot_id</code> is automated and controls the unique identity of each shot)</em>.</li>
-<li>Use keyboard shortcuts for faster navigation</li>
-<li>Regularly export CSV files for backup</li>
-<li>At the end of each session save (.aimms routing info), backup the database.</li>
-<li>At the end of big media import changes archive the entire project to a zip file and copy it off site.</li>
-<li>If you lose control of a large media project, look at the AIMMS migration software as a solution to restructure a project. With it you can import csv of metadata and relocate media files into a valid AIMMS project format. This is one of the reasons for the migration code to be created.</li>
+<li>
+<p>Prefix the name of your project with something instantly recognisable as an AIMMS project. For example, <code>project_Some-Project</code>. A prefix will make it easy to search later across drives.</p>
+</li>
+<li>
+<p>Create a csv of multiple shots with metadata, then import via the Shots page. <em>(You can import a csv at any time. Importing a csv will accept duplicated names or empty column entries (only a <code>shot_name</code> must be present, along with relevant column headings)</em>. A <code>shot_id</code> is automatically created by the system for each shot to manage its unique identity in the database.</p>
+</li>
+<li>
+<p>For an example csv, create a dummy entry in a new AIMMS project using "Add Shot" button to automatically populate the columns, then export the csv out <em>(from the "File" menu drop down)</em>. Exported csv files can be found in the <code>project_YourProject\data\csv</code> folder.</p>
+</li>
+<li>
+<p>You can change the order of shots from within the Shots page by double-clicking on a shot and changing the <code>order_number</code>. This will change its placement order in the Shot, Images, and Videos pages.</p>
+</li>
+<li>
+<p>To export only your starred media out for editing in external software, e.g., Davinci Resolve to make a final cut or edited sequences from multiple video clips, use <em>"Export Starred Takes"</em> from the <em>"File"</em> dropdown menu. A simple python script can then be used to copy the media and rename it using <code>shot_name</code> column, for quick import to the video editing software of your choice. <em>(EDL and XML export methods were trialled, but found to be inconsistent between different video editing systems)</em>.</p>
+</li>
+<li>
+<p>Use keyboard shortcuts for faster navigation.</p>
+</li>
+<li>
+<p>Regularly save <em>(.aimms routing info)</em>, and backup the database <em>(found in the "File" dropdown menu)</em>.</p>
+</li>
+<li>
+<p>After large media changes, archive the entire project to a zip file for storage <em>(found in the "File" dropdown menu)</em>.</p>
+</li>
+<li>
+<p>Regularly backup acrhived projects to offline storage for safe-keeping.</p>
+</li>
+<li>
+<p>If you lose control of a large media project, look at the <a href="https://github.com/mdkberry/migrating-to-aimms">AIMMS migration software</a> as a way to restructure a project. With it you can import a csv of metadata, use the last saved <code>.aimms</code> file or <code>shot_name_mapping.json</code> to re-construct a project, or migrate disorganised media files into a valid AIMMS project format.</p>
+</li>
+<li>
+<p>The backup options provided under the "File" menu will help in restoring projects if required.</p>
+</li>
 </ul>
-<p><strong><em>IMPORTANT NOTE:</em></strong> We can not be held responsible for loss of data in using this software but have taken every precaution to provide ways to re-establish integrity of a corrupt project. Backups and features to rescue corrupt databases are there to help in the case of failed project integrity. We highly recommend you save, backup, and archive regularly for peace of mind.</p>
+<p><strong><em>IMPORTANT NOTE:</em></strong> <em>Databases failures are rare, but we can not be held responsible for loss of data when using this software. Every precaution has been taken to provide ways to re-establish integrity of a corrupted project. Multiple backup features are provided from the "File" dropdown menu to help in the case of failed project integrity. We highly recommend you save, backup, and archive regularly for peace of mind.</em></p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <h3 id="explore-advanced-features">Explore Advanced Features:<a class="headerlink" href="#explore-advanced-features" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Import Existing Data</strong>: Use CSV import to bring in existing shot lists</li>
 <li><strong>Customize Settings</strong>: Adjust themes and preferences to your liking</li>
-<li><strong>Learn Advanced Modules</strong>: Explore Assets, Logs, and Routing matrix.</li>
+<li><strong>Learn Advanced Modules</strong>: Explore Assets, Unused, Logs, and Routing pages.</li>
 </ul>
 <h3 id="practice-with-examples">Practice with Examples:<a class="headerlink" href="#practice-with-examples" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1251,12 +1289,12 @@ Your_Project/
 <li>Practice adding different types of media</li>
 <li>Experiment with the starred system</li>
 <li>Try the search and filtering features</li>
+<li>Try the popup viewing modals in Image, Videos, and Assets pages.</li>
 </ul>
 <h3 id="learn-best-practices">Learn Best Practices:<a class="headerlink" href="#learn-best-practices" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Read the detailed user guides for each module</li>
-<li>Watch video tutorials for visual learning</li>
-<li>Join the Patreon (free tier) for latest information and news</li>
+<li>Watch <a href="https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN">the video tutorials</a> for the most up to date information and methods in practice</li>
+<li>Join the <a href="https://www.patreon.com/c/AIMakingMovies">Patreon (free tier)</a> for latest information and news</li>
 </ul>
 <h2 id="troubleshooting-common-issues">Troubleshooting Common Issues<a class="headerlink" href="#troubleshooting-common-issues" title="Permanent link">&para;</a></h2>
 <h3 id="shot-not-appearing">Shot Not Appearing:<a class="headerlink" href="#shot-not-appearing" title="Permanent link">&para;</a></h3>
@@ -1267,35 +1305,36 @@ Your_Project/
 <li>If that fails change between the pages</li>
 <li>As a last resort restart the application.</li>
 </ul>
-<p><strong>NOTE</strong>: If a take or shot is still not showing up, then run the "Analyze Zeroed-Out Takes" button in Unused page. It might be there was a failure to connect the media to the database. If your shot shows there, delete it, restart the application and then try again. If the problem continues, check permissions on folders or locked files.</p>
+<p><strong>NOTE</strong>: If a take or shot is still not showing up, then run the "Analyze Zeroed-Out Takes" button in Unused page. It might be there was a failure to connect the media to the database. If your shot is listed as orphaned or has an error, delete it, restart the application and then try again. If the problem continues, check permissions on folders or locked files. For bugs or strange results post to the <a href="https://github.com/AI-Making-Movies/aimms-docs/issues">github issues</a> page</p>
 <h3 id="media-not-loading">Media Not Loading:<a class="headerlink" href="#media-not-loading" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ensure files are in supported formats (PNG, JPG, MP4, etc.)</li>
 <li>Check file paths are accessible</li>
-<li>Verify file sizes aren't too large</li>
+<li>Verify file sizes aren't so large that they impact load times</li>
 </ul>
-<p><strong>NOTE</strong>: AIMMS has been tested with a 600 shot project containing 21,000 takes with a total size of 23GB in media files and it worked fine. The only delay (1 to 2 seconds) was cache related in managing the navigation between pages (50 videos per page when caching). But this was with 3 to 5 second long clips and only a few larger ones. If your individual clips are huge (which can happen for edited sequences) then you will need to account for that in use of the Storyboard management software.</p>
+<p><strong>NOTE</strong>: AIMMS has been tested with a 600 shot project containing 21,000 takes with a total size of 23GB in media files. A short delay can occur when managing the navigation between pages for larger projects <em>(50 entries per page require caching)</em>. If individual video clips are large in file size <em>(which can happen for edited sequences)</em> then you will need to account for that in use of the software load times.</p>
 <h3 id="application-performance">Application Performance:<a class="headerlink" href="#application-performance" title="Permanent link">&para;</a></h3>
-<p>AIMMS has been made with low processing overhead in mind. This is to allow for ComfyUI to run on the same machine with it open if necessary. However, AIMMS does not need to use a GPU and has been tested running on cheap 4GB ram laptop without issue. It uses ffmpeg and ffprobe for video previewing (bundled with Windows version of AIMMS application, but those will need to be provided with Linux or OSX).</p>
-<p>It should not need much to run, but if you have problems, ensure sufficient disk space is available and that system ram is not full during use.</p>
-<p>Projects are best stored on SSD drives for speed of media loading. This could be on network or external drives. If you are storing projects on SATA or slow USB external drives this might impact speed of performance. While the AIMMS application does not need to run on SSD drive, it will perform better if it does.</p>
+<p>AIMMS has been made with low processing overhead in mind and has a robust caching system. However, AIMMS does not need to use a GPU and has been tested running on  low ram devices. It uses <code>ffmpeg</code> and <code>ffprobe</code> for video previewing <em>(bundled with Windows version of AIMMS application, but will need to be provided with other platforms)</em>.</p>
+<p>If you have problems, ensure sufficient disk space is available and that system ram is not full during use. AIMMS will generally use between 500mb and 1GB in application ram with a large project. </p>
+<p>For low ram devices and older machines you may need to close other software for best performace. For example, multiple browser tabs left open can consume large amounts of ram.</p>
+<p>AIMMS projects are best stored on SSD drives for speed of media loading. This could be on local, network, or external drives. If you are storing projects on SATA or slow USB external drives, this will impact speed of performance. While the AIMMS application itself does not need to run on SSD drive, it will likely perform better if it does.</p>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <h3 id="built-in-help">Built-in Help:<a class="headerlink" href="#built-in-help" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Documentation</strong>: Press <code>F1</code> or go to Help → Documentation</li>
-<li><strong>Keyboard Shortcuts</strong>: Press <code>Ctrl+K</code> or go to Help → Keyboard Shortcuts</li>
+<li><strong>Documentation</strong>: Press <code>F1</code> or go to Help → Documentation (Online resource)</li>
 </ul>
 <h3 id="online-resources">Online Resources:<a class="headerlink" href="#online-resources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://markdkberry.com/software/"><strong>Official Website</strong></a>: Visit for latest downloads and news</li>
 <li><a href="https://ai-making-movies.github.io/aimms-docs/"><strong>Documentation</strong></a>: Comprehensive user guides</li>
 <li><a href="https://www.youtube.com/@markdkberry"><strong>Video Tutorials</strong></a>: Step-by-step video guides</li>
-<li><strong>Community Forum</strong>: User discussions and support <em>(planned)</em></li>
+<li><strong>Community Forum</strong>: At this time <a href="https://www.patreon.com/c/AIMakingMovies">Patreon (Free Tier)</a> provides the best option for discussion on use.</li>
 </ul>
 <h3 id="support">Support:<a class="headerlink" href="#support" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Logs</strong>: Check the Logs page module for error information</li>
 <li><strong>Export Data</strong>: Use export features to help track health of project data</li>
+<li><a href="https://github.com/AI-Making-Movies/aimms-docs/issues"><strong>Github Issues</strong></a>: For reporting bugs and issues</li>
 </ul>
 <p>Congratulations! You've successfully created your first AIMMS project and learned the basics. Continue exploring the application and refer to the detailed user guides as you become more familiar with the features.</p>
 
