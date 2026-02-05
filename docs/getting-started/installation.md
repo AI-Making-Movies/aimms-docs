@@ -167,10 +167,10 @@ You may install and use AIMMS on more than one of your own devices for personal 
 
 After successful installation:
 
-*While this site is in development it is recommended you check the [**Video Tutorials**](https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) for the most up to date information on use. - Jan 2026*
+*While this site is in development it is recommended you check the [**Video Tutorials**](https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) for the most up to date information on use. - Feb 2026*
 
-1. **Create Your First Project**: Follow the Quick Start Guide
-2. **Explore the Interface**: Familiarize yourself with the main modules
+1. **Create Your First Project**: Follow the "First Steps" Guide
+2. **Explore the Interface**: Familiarize yourself with the main page modules
 3. **Import Existing Data**: Use CSV import if you have existing shot lists
 4. **Customize Settings**: Adjust to your preferences
 5. **Learn the Workflow**: Understand the complete AIMMS workflow
