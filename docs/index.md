@@ -12,7 +12,7 @@
 
 ![AIMMS version 1.0.0 (StorM)](images/general/about-image.png)
 
-*"Visual storyboarding of my AI short videos was something I needed after running into "shot tracking overwhelm" using only a csv. So, I built AIMMS initially for myself but was soon being asked for access to it. This is the result of that. - Mark"*
+*"Visual storyboarding of my AI short videos was something I needed after running into "shot tracking overwhelm" using only a csv. So, I built AIMMS initially for myself but was soon being asked for access to it. This is the result of that." - Mark*
 
 ## AIMMS v1.0 (StorM)
 
@@ -40,7 +40,7 @@ Additional tools, such as the [**AIMMS migration tool**](https://github.com/mdkb
 
 - **A one-time 30-day trial is included as part of the download**. After that a license will need to be purchased for use.
 
-- AIMMS is a **one-time license purchase** desktop application. Purchasing a license grants you the right to use the software (v1.x) as-is.
+- **A full license gives you perpetual license for v1.x and all versions of 1.x. Future versions 2.x onward will be paid upgrades.** This is because version 2.x will include API and additional services requiring a major coding period (planned for > 2027 at earliest). Version 1.x will include patches, minor updates and upgrades to improve existing functionality.
 
 - [Purchase Policy](https://markdkberry.com/aimms-docs/purchase-policy/)
 

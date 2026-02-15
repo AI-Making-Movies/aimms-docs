@@ -16,7 +16,7 @@ AIMMS supports Windows 10, Linux, and macOS. It's distributed as a standalone ap
 
 ### Is AIMMS free to use?
 
-AIMMS requires a license for full functionality.
+AIMMS requires a license for full functionality. Note: A license provides perpetual access to all versions 1.x, but future versions 2.x onward will be paid upgrades.
 
 ## Installation and Setup
 

@@ -4,7 +4,7 @@
 
 AIMMS (Artificial Intelligent Movie Making Systems) is a professional storyboard management application designed for AI filmmakers. It provides a comprehensive solution for organizing and managing your shots, images, videos, and assets in a structured, efficient way.
 
-**AIMMS Version 1.0 (StorM)** is a passive storyboard management system. Future versions will integrate with AI systems using API and batch workflow processing.
+**AIMMS Version 1.0 (StorM)** is a passive storyboard management system. Future versions will integrate with AI systems using API and batch workflow processing. Note: Version 1.x licenses include all future 1.x updates, but versions 2.x onward will be paid upgrades.
 
 ## Key Concepts
 
