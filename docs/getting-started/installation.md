@@ -9,8 +9,8 @@ AIMMS is distributed as a standalone application:
 1. Visit the [official AIMMS portal](https://markdkberry.com/software/)
 2. Download the latest version for your platform
 3. Choose the appropriate file for your operating system:
-   - **Windows**: `AIMMS_v1.0.0_Win64.zip`
-   - **Linux**: `AIMMS_v1.0.0_Linux.tar.gz`
+   - **Windows**: `AIMMS_v1.0.1_Win64.zip`
+   - **Linux**: `AIMMS_v1.0.1_Linux.tar.gz`
    - **macOS**: *(planned future release)*
 
 ### Step 2: Extract Files
@@ -20,8 +20,8 @@ AIMMS is distributed as a standalone application:
 2. **Linux**: Extract the tar.gz file into a suitable folder then do the following:
 
    ```
-   tar -xzvf AIMMS_v1.0.0_Linux.tar.gz
-   cd AIMMS_v1.0.0_Linux
+   tar -xzvf AIMMS_v1.0.1_Linux.tar.gz
+   cd AIMMS_v1.0.1_Linux
    ./main-aimms_qt.bin
    ```
 
@@ -36,13 +36,13 @@ The AIMMS software will suggest a local `AIMMS Project` location but you can cho
 
 Once completed a restart of the application is necessary. This is common between projects to protect the database integrity and ensure a defined moat between projects.
 
-You will also notice a console window is present as well as the application on the task bar. Future versions will provide the ability to disable the console window but for v1.0.0 it will help with debugging any issues that arise.
+You will also notice a console window is present as well as the application on the task bar. Future versions will provide the ability to disable the console window but for v1.0.x it will help with debugging any issues that arise.
 
 ### Step 4: License Activation
 
 1. After setting up a project, on the next launch you'll be prompted for a license.
-2. Enter your email address to start a one-time 30 day trial.
-3. Alternatively you can purchase a .lic license file via the online store and load it into the browser then activate it.
+2. Enter your email address to start a **one-time** 30-day trial.
+3. Alternatively you can purchase a `.lic` license file via the online store and load it into the browser then activate it.
 3. The application will validate then activate the license, and either the trial countdown will begin, or the license will engage giving you permanent use of vrs 1.x.
 
 Note: The 30 day trial is one-time only and after that a license should be purchased.
@@ -167,7 +167,7 @@ You may install and use AIMMS on more than one of your own devices for personal 
 
 After successful installation:
 
-*While this site is in development it is recommended you check the [**Video Tutorials**](https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) for the most up to date information on use. - Feb 2026*
+*While this site is in development it is recommended you check the [**Video Tutorials**](https://www.youtube.com/playlist?list=PLVCJTJhkunkRutnutiP9dgd6crw8MWEHN) for the most up to date information on use.*
 
 1. **Create Your First Project**: Follow the "First Steps" Guide
 2. **Explore the Interface**: Familiarize yourself with the main page modules
